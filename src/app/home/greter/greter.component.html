@@ -1,2 +1,7 @@
 <p>greter works!</p>
 <h1>{{ message() }}</h1>
+
+<label for="greter">Add an item for parent...!</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Send to parent</button>
+

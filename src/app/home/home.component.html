@@ -1,6 +1,14 @@
-<!-- <p>home works!</p> -->
+<p>home works!</p>
+
+<h1>Items form greter...!</h1>
+<ul>
+    <li *ngFor="let item of list">{{item}}</li>
+</ul>
+
 
 <!-- <h1>{{ title2 }}</h1> -->
-<app-counter />
+<app-counter [message2] = "message2()"/>
 <!-- <app-greter [message]="message()"></app-greter> -->
-<app-greter [message] = "message()" />
+<app-greter (newItemEvent)="addItem($event)"  [message] = "message()" />
+
+
